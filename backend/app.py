@@ -4,7 +4,7 @@ import requests
 import os
 
 # Serve React from the build folder
-app = Flask(__name__, static_folder="../frontend/build", static_url_path='/')
+app = Flask(__name__, static_folder="frontend", static_url_path="/")
 CORS(app)
 
 # Get API key from environment or fallback for local dev
