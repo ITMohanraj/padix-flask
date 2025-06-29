@@ -17,7 +17,8 @@ const App = () => {
     const fetchWeather = async () => {
         if (!city.trim()) return alert("Please enter a city name.");
         try {
-            const response = await fetch(`https://weather-app-r7fs.onrender.com/weather?city=${encodeURIComponent(city)}`);
+            const apiUrl = process.env.REACT_APP_API_URL || 'https://padix-flask-production.up.railway.app/weather';
+            const response = await fetch(`${apiUrl}?city=${encodeURIComponent(city)}`);
             if (!response.ok) {
                 const err = await response.json();
                 alert(err.error || 'Failed to fetch weather');
