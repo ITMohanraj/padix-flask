@@ -88,7 +88,7 @@ const App = () => {
 
                 {/* Header Section */}
                 <header className="top">
-                    <h1>Weather App by Emile Eid</h1>
+                    <h1>Mohan Weather Application</h1>
                 </header>
 
                 {/* Location Input Section */}
